@@ -123,3 +123,43 @@ textarea { resize: vertical; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+/* Catálogo dinámico */
+.loading-message, .status-message, .empty-list-message { padding: 18px; color: var(--muted); }
+.status-message, .empty-list-message { border: 1px solid var(--line); background: var(--surface); }
+.error-message { border-left: 4px solid var(--ink); }
+.category-list { align-items: center; }
+.category-chip { min-height: 40px; border: 1px solid var(--accent); border-radius: 30px; padding: 7px 15px; background: transparent; color: var(--ink); font: inherit; font-size: .85rem; cursor: pointer; }
+.category-chip:hover, .category-chip[aria-pressed="true"] { background: var(--accent); }
+.listing-heading { margin-top: 26px; }
+.listing-heading h2 { font-size: 1.55rem; }
+.small { font-size: .85rem; }
+.listing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.listing-card { display: grid; grid-template-columns: minmax(130px, 36%) 1fr; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 22px; }
+.listing-card .card-image { height: 100%; min-height: 170px; }
+.listing-card .card-image img { height: 100%; min-height: 170px; aspect-ratio: auto; }
+.listing-card .card-content { padding-top: 0; }
+.listing-card .category { margin-bottom: 5px; }
+.listing-card h3 { font-size: 1.35rem; }
+.listing-card .text-link { margin-top: 8px; }
+.listing-grid.is-empty { grid-template-columns: 1fr; }
+.breadcrumb { margin-bottom: 22px; font-size: .86rem; }
+.breadcrumb span { padding: 0 8px; color: var(--muted); }
+.article-layout { display: grid; grid-template-columns: minmax(0, 1fr) 245px; gap: 36px; }
+.article-content h1 { max-width: 850px; }
+.article-summary { max-width: 780px; margin: 15px 0 22px; font-size: 1.15rem; }
+.article-image { display: block; width: 100%; max-height: 390px; object-fit: cover; background: var(--soft); }
+.article-body { max-width: 780px; margin-top: 25px; }
+.article-body p { margin: 0 0 16px; }
+.article-sidebar { align-self: start; border-left: 1px solid var(--line); padding-left: 22px; }
+.article-sidebar h2 { margin: 6px 0 10px; font-size: 1.55rem; }
+.article-sidebar .button { margin: 16px 0 8px; }
+.article-sidebar .text-link { display: flex; }
+
+@media (max-width: 700px) {
+  .listing-grid, .article-layout { grid-template-columns: 1fr; }
+  .listing-card { grid-template-columns: 1fr; gap: 0; }
+  .listing-card .card-image, .listing-card .card-image img { height: 210px; min-height: 0; }
+  .listing-card .card-content { padding-top: 12px; }
+  .article-sidebar { border-left: 0; border-top: 1px solid var(--line); padding: 20px 0 0; }
+  .listing-heading { display: block; }
+}

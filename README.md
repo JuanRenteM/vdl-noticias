@@ -4,14 +4,20 @@ Prototipo académico del portal VDL Noticias, construido a partir de los mockups
 
 ## Abrir el prototipo
 
-Abre `prototipo-semana-5/index.html` directamente en un navegador. En esta fase, las páginas muestran la maquetación y la navegación adaptable. Las funciones de datos, favoritos y formularios se agregarán en los siguientes pasos.
+El catálogo se carga desde un archivo JSON. Para que el navegador pueda leerlo, sirve la carpeta con un servidor local:
 
-## Secciones maquetadas
+```powershell
+cd prototipo-semana-5
+py -m http.server 8000
+```
 
-- Inicio
-- Noticias
-- Favoritos
-- Contacto
-- Gestionar
+Abre `http://localhost:8000` en el navegador. Detén el servidor con `Ctrl+C`.
 
-El diseño usa la paleta salvia y fondos claros de los mockups. Las ilustraciones SVG originales están en `prototipo-semana-5/assets/`.
+## Avance actual
+
+- Inicio con noticia destacada y tarjetas cargadas desde `data/noticias.json`.
+- Listado de noticias con filtro por categoría.
+- Vista de detalle reutilizable por identificador: `detalle.html?id=biblioteca-barrio`.
+- Navegación adaptable entre Inicio, Noticias, Favoritos, Contacto y Gestionar.
+
+Favoritos, validaciones del formulario y gestión de publicaciones se completarán en los siguientes commits.
