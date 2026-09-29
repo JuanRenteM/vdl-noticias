@@ -178,3 +178,26 @@ textarea { resize: vertical; }
 @media (max-width: 700px) {
   .favorites-grid { grid-template-columns: 1fr; }
 }
+/* Formularios y gestión local */
+.field-error { display: block; min-height: 0; margin-top: 5px; color: #7a2c24; font-size: .82rem; }
+.field input[aria-invalid="true"], .field select[aria-invalid="true"], .field textarea[aria-invalid="true"] { border: 2px solid #7a2c24; }
+.form-status { margin: 8px 0; border-left: 4px solid var(--accent); padding: 12px 14px; background: var(--soft); color: var(--ink); }
+.form-status.error-message { border-left-color: #7a2c24; }
+.management-list > h2 { margin-bottom: 8px; font-size: 1.8rem; }
+.manage-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding: 16px 0; }
+.manage-row .category { margin: 0 0 4px; }
+.manage-row h3 { font: 700 1rem/1.4 Arial, sans-serif; }
+.manage-row p:not(.category) { margin-top: 5px; font-size: .88rem; }
+.delete-button { flex: 0 0 auto; min-height: 40px; border: 1px solid var(--ink); border-radius: 3px; padding: 8px 12px; background: transparent; color: var(--ink); font: 700 .85rem Arial, sans-serif; cursor: pointer; }
+.delete-button:hover { background: var(--ink); color: var(--paper); }
+.confirm-dialog { width: min(610px, calc(100% - 36px)); border: 1px solid var(--line); padding: 30px; background: var(--surface); color: var(--ink); }
+.confirm-dialog::backdrop { background: rgb(38 43 35 / 45%); }
+.confirm-dialog h2 { margin-bottom: 12px; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; }
+.button.secondary { border-color: var(--ink); background: transparent; }
+.button.danger { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+
+@media (max-width: 700px) {
+  .manage-row { align-items: flex-start; }
+  .dialog-actions { flex-wrap: wrap; }
+}

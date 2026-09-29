@@ -13,12 +13,13 @@ py -m http.server 8000
 
 Abre `http://localhost:8000` en el navegador. Detén el servidor con `Ctrl+C`.
 
-## Avance actual
+## Funcionalidades disponibles
 
 - Inicio con noticia destacada y tarjetas cargadas desde `data/noticias.json`.
-- Listado de noticias con filtro por categoría.
-- Vista de detalle reutilizable por identificador, por ejemplo `detalle.html?id=biblioteca-barrio`.
-- Favoritos que se guardan en `localStorage` y se pueden retirar desde las tarjetas o el detalle.
-- Menú adaptable entre Inicio, Noticias, Favoritos, Contacto y Gestionar.
+- Listado de noticias con filtro por categoría y detalle por identificador.
+- Favoritos persistentes en `localStorage`.
+- Formulario de contacto con validación de campos y confirmación visual. No se envían mensajes.
+- Gestión local de noticias: creación y eliminación con confirmación. El catálogo editado se conserva en `localStorage`.
+- Diseño adaptable para escritorio y móvil.
 
-El contacto y la gestión de publicaciones se completarán en los siguientes commits. Favoritos y publicaciones guardadas son locales al navegador y no se sincronizan entre dispositivos.
+Los favoritos, las noticias creadas y las eliminaciones pertenecen al navegador local. No hay un servidor ni una base de datos.
