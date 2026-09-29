@@ -17,7 +17,8 @@ Abre `http://localhost:8000` en el navegador. Detén el servidor con `Ctrl+C`.
 
 - Inicio con noticia destacada y tarjetas cargadas desde `data/noticias.json`.
 - Listado de noticias con filtro por categoría.
-- Vista de detalle reutilizable por identificador: `detalle.html?id=biblioteca-barrio`.
-- Navegación adaptable entre Inicio, Noticias, Favoritos, Contacto y Gestionar.
+- Vista de detalle reutilizable por identificador, por ejemplo `detalle.html?id=biblioteca-barrio`.
+- Favoritos que se guardan en `localStorage` y se pueden retirar desde las tarjetas o el detalle.
+- Menú adaptable entre Inicio, Noticias, Favoritos, Contacto y Gestionar.
 
-Favoritos, validaciones del formulario y gestión de publicaciones se completarán en los siguientes commits.
+El contacto y la gestión de publicaciones se completarán en los siguientes commits. Favoritos y publicaciones guardadas son locales al navegador y no se sincronizan entre dispositivos.
