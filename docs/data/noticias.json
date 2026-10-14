@@ -1,0 +1,42 @@
+﻿[
+  {
+    "id": "biblioteca-barrio",
+    "categoria": "Educación",
+    "titulo": "Aprender también es transformar el barrio",
+    "resumen": "Una biblioteca comunitaria conecta a estudiantes, libros e ideas para imaginar nuevas formas de aprender.",
+    "contenido": "Una biblioteca del barrio abrió sus puertas para que estudiantes y familias encuentren un lugar tranquilo para leer, estudiar y compartir ideas.\n\nEl espacio reúne libros donados, mesas de trabajo y encuentros semanales. Sus actividades nacen de las propuestas de quienes lo visitan.\n\nQuienes participan cuentan que el proyecto les ha permitido acompañar las tareas escolares y descubrir nuevas lecturas en comunidad.",
+    "imagen": "assets/educacion.svg",
+    "textoAlternativo": "Ilustración de una biblioteca comunitaria",
+    "destacada": true
+  },
+  {
+    "id": "laboratorio-creacion",
+    "categoria": "Tecnología",
+    "titulo": "Ideas pequeñas, soluciones que conectan",
+    "resumen": "Un laboratorio de creación abre espacio a proyectos que acercan la tecnología a la vida cotidiana.",
+    "contenido": "Un grupo de jóvenes convirtió un salón comunal en un laboratorio de creación. Allí se reúnen para aprender herramientas digitales y proponer soluciones a necesidades del barrio.\n\nLas sesiones incluyen ejercicios prácticos con componentes electrónicos y programación básica. Cada equipo comparte sus avances para recibir ideas y mejorar su prototipo.\n\nLa iniciativa busca que más personas puedan acercarse a la tecnología mediante proyectos sencillos, colaborativos y útiles para su entorno.",
+    "imagen": "assets/tecnologia.svg",
+    "textoAlternativo": "Ilustración de un proyecto de tecnología",
+    "destacada": false
+  },
+  {
+    "id": "camino-territorio",
+    "categoria": "Turismo",
+    "titulo": "Un camino para descubrir el territorio",
+    "resumen": "Senderos, paisajes y encuentros locales invitan a viajar con curiosidad y respeto por el entorno.",
+    "contenido": "Una ruta guiada conecta varios senderos con pequeños emprendimientos de la región. En cada parada, habitantes locales comparten historias del paisaje y de las tradiciones que lo rodean.\n\nEl recorrido propone caminar sin afán, cuidar los caminos y apoyar a quienes reciben a los visitantes. La experiencia cambia con las temporadas y permite conocer el territorio desde nuevas perspectivas.\n\nSus organizadores recomiendan planear la visita y seguir las indicaciones de las comunidades anfitrionas.",
+    "imagen": "assets/turismo.svg",
+    "textoAlternativo": "Ilustración de un paisaje para recorrer",
+    "destacada": false
+  },
+  {
+    "id": "mercado-local",
+    "categoria": "Comercio",
+    "titulo": "El mercado local cuenta nuevas historias",
+    "resumen": "Emprendimientos de barrio comparten sus productos y la historia de quienes están detrás de ellos.",
+    "contenido": "Los puestos del mercado local ofrecen frutas, productos preparados y artículos hechos por emprendedores de la zona. Cada fin de semana, visitantes y vecinos se encuentran para comprar y conversar.\n\nQuienes participan destacan el valor de conocer el origen de los productos y apoyar a los negocios cercanos. Algunas iniciativas también comparten talleres y recetas para aprovechar los ingredientes de temporada.\n\nEl mercado continúa sumando propuestas y mantiene abierta la invitación a descubrir el trabajo de sus comerciantes.",
+    "imagen": "assets/comercio.svg",
+    "textoAlternativo": "Ilustración de un mercado local",
+    "destacada": false
+  }
+]
