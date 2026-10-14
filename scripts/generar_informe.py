@@ -1,7 +1,5 @@
 from pathlib import Path
 from xml.sax.saxutils import escape
-import argparse
-import json
 from PIL import Image as PILImage
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
@@ -11,12 +9,6 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Image, Table, TableStyle, Preformatted
 from reportlab.platypus.tableofcontents import TableOfContents
-
-args = argparse.ArgumentParser()
-args.add_argument('--video-url', default='')
-options = args.parse_args()
-if options.video_url and not options.video_url.startswith(('https://www.youtube.com/', 'https://youtube.com/', 'https://youtu.be/')):
-    raise ValueError('El enlace del video debe ser una URL de YouTube.')
 
 PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT.parent
@@ -209,14 +201,6 @@ link('Aplicación desplegada','https://juanrentem.github.io/vdl-noticias/')
 body('El repositorio conserva la etapa de semana 5 y contiene la implementación Angular, las instrucciones, las capturas y la documentación final. El ZIP del entregable agrega el PDF y el MP4 para facilitar su descarga y envío. Se excluyen node_modules, archivos temporales y credenciales.')
 story.append(PageBreak())
 
-heading('Video explicativo')
-video_result = json.loads((PROJECT/'documentacion/video_metadatos.json').read_text(encoding='utf-8'))
-secs = video_result['duracion_segundos']
-body(f'El paquete incluye VDL_Noticias_Demostracion_Semana_7.mp4, con una duración aproximada de {int(secs)//60} minutos y {round(secs)%60} segundos, inferior al máximo de tres minutos. El video muestra diez escenas de la aplicación real: inicio, catálogo, filtro, detalle, favoritos, validación de contacto, confirmación, creación, eliminación y adaptación móvil. La narración sintética está en español; se adjuntan el guion y un archivo de subtítulos con los títulos de las escenas.')
-if options.video_url:
-    link('Video en YouTube',options.video_url)
-else:
-    body('Enlace de YouTube: pendiente de publicación por el estudiante. El archivo MP4 está preparado para subirlo. Antes de entregar el informe en el aula, debe incorporarse la URL real de YouTube; el MP4 local no sustituye ese requisito de la guía.')
 heading('Alcance y limitaciones')
 body('La aplicación demuestra funciones de front-end con contenido de muestra. No tiene cuentas, autenticación, backend ni base de datos compartida. Las publicaciones y los favoritos se conservan en un único navegador y origen; otros visitantes reciben el catálogo inicial. El formulario de contacto no transmite información. El contenido de las noticias y las ilustraciones son ejemplos académicos.')
 body('La eliminación modifica la copia local y no borra el JSON ni el código publicado. Para iniciar de nuevo, se pueden eliminar las dos claves de VDL Noticias desde las herramientas del navegador. Las páginas muestran estados de carga, error, ausencia de contenido y rutas no encontradas para orientar al usuario.')

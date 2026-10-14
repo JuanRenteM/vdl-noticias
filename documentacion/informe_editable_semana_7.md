@@ -126,12 +126,6 @@ Aplicación desplegada: https://juanrentem.github.io/vdl-noticias/
 
 El repositorio conserva la etapa de semana 5 y contiene la implementación Angular, las instrucciones, las capturas y la documentación final. El ZIP del entregable agrega el PDF y el MP4 para facilitar su descarga y envío. Se excluyen node_modules, archivos temporales y credenciales.
 
-## Video explicativo
-
-El paquete incluye VDL_Noticias_Demostracion_Semana_7.mp4, con una duración aproximada de 2 minutos y 34 segundos, inferior al máximo de tres minutos. El video muestra diez escenas de la aplicación real: inicio, catálogo, filtro, detalle, favoritos, validación de contacto, confirmación, creación, eliminación y adaptación móvil. La narración sintética está en español; se adjuntan el guion y un archivo de subtítulos con los títulos de las escenas.
-
-Enlace de YouTube: pendiente de publicación por el estudiante. El archivo MP4 está preparado para subirlo. Antes de entregar el informe en el aula, debe incorporarse la URL real de YouTube; el MP4 local no sustituye ese requisito de la guía.
-
 ## Alcance y limitaciones
 
 La aplicación demuestra funciones de front-end con contenido de muestra. No tiene cuentas, autenticación, backend ni base de datos compartida. Las publicaciones y los favoritos se conservan en un único navegador y origen; otros visitantes reciben el catálogo inicial. El formulario de contacto no transmite información. El contenido de las noticias y las ilustraciones son ejemplos académicos.
