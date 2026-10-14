@@ -1,7 +1,7 @@
 import { test, expect, Page } from '@playwright/test';
 
 async function abrir(page: Page, ruta = 'inicio') {
-  await page.goto(`/#/${ruta}`);
+  await page.goto(`./#/${ruta}`);
   await expect(page.getByText('Cargando noticias...', { exact: true })).toHaveCount(0);
 }
 
@@ -115,7 +115,7 @@ test('recuperación de almacenamiento inválido y catálogo vacío', async ({ pa
   await page.evaluate(() => localStorage.setItem('vdl-noticias-catalogo', '[]'));
   // Use a new context page without the init script to check intentional empty catalogs.
   const nueva = await page.context().newPage();
-  await nueva.goto('/#/inicio');
+  await nueva.goto('./#/inicio');
   await nueva.evaluate(() => localStorage.setItem('vdl-noticias-catalogo', '[]'));
   await nueva.reload();
   // Init script is page-specific; new page retains the explicitly empty catalog.

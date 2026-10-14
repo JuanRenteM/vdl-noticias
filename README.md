@@ -94,3 +94,14 @@ Abre http://localhost:8000.
 - MDN. localStorage: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 
 Guía académica: *Orientaciones para las entregas del módulo Front End*, agosto de 2026, de John Olarte Ramos. El informe final describe funcionamiento, tecnologías, conclusiones y referencias.
+
+## Incorporar el enlace de YouTube al PDF
+
+El ZIP incluye el video narrado, de aproximadamente 2:34. Después de subirlo a YouTube, regenera el PDF con la URL real desde la carpeta del proyecto:
+
+```powershell
+py -m pip install -r documentacion/requirements.txt
+py scripts/generar_informe.py --video-url "https://www.youtube.com/watch?v=IDENTIFICADOR_REAL"
+```
+
+El comando actualiza `documentacion/VDL_Noticias_Entrega_Semana_7.pdf` y el informe editable. El generador utiliza las fuentes de Windows, las capturas y el logo incluidos. El enlace debe ser público o no listado y permitir la consulta del tutor.
