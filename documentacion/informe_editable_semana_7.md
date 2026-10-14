@@ -109,26 +109,10 @@ Nota. La creación y eliminación fueron verificadas con recarga del navegador. 
 
 Las reglas CSS de semana 5 se reutilizaron en Angular. En ventanas de hasta 700 píxeles, la navegación se convierte en un menú desplegable y las tarjetas, artículos y formularios pasan a una columna. Se verificó que las vistas de inicio, listado, contacto y gestión no producen desplazamiento horizontal a 390 píxeles de ancho.
 
-La interfaz incluye enlaces para saltar al contenido, foco visible, textos alternativos en imágenes, encabezados semánticos y mensajes de estado. Los botones de filtro y favoritos exponen su selección mediante aria-pressed. El diálogo de eliminación usa el elemento nativo dialog. Estas mejoras se verificaron en los recorridos descritos; no se realizó una auditoría integral de accesibilidad.
+La interfaz incluye enlaces para saltar al contenido, foco visible, textos alternativos en imágenes, encabezados semánticos y mensajes de estado. Los botones de filtro y favoritos exponen su selección mediante aria-pressed. El diálogo de eliminación usa el elemento nativo dialog. Estas mejoras se verificaron en los recorridos principales; no se realizó una auditoría integral de accesibilidad.
 
 Figura 7. Navegación e inicio en móvil
 Nota. Captura real a 390 x 844 píxeles. El menú permite acceder a las mismas secciones de escritorio.
-
-## Verificación y resultados
-
-La compilación de producción se completó sin errores. Se ejecutaron ocho pruebas de recorridos con Playwright en Chromium: primero en el servidor local y después en la dirección pública de GitHub Pages. Los ocho recorridos aprobaron en ambos entornos. Las pruebas utilizan contextos aislados para no modificar los datos del navegador del estudiante.
-
-| Recorrido verificado | Resultado |
-| Catálogo, cuatro filtros, detalle, recarga y rutas inexistentes | Aprobado |
-| Guardar favorito, recargar, quitar y estado vacío | Aprobado |
-| Contacto vacío, espacios, correo inválido y confirmación válida | Aprobado |
-| Crear, recargar, cancelar y confirmar borrado; limpiar favorito | Aprobado |
-| Catálogo guardado inválido y catálogo intencionalmente vacío | Aprobado |
-| Error HTTP, bloqueo de creación y reintento | Aprobado |
-| Almacenamiento bloqueado al guardar un favorito | Aprobado |
-| Menú móvil, seis vistas y capturas sin desbordamiento horizontal | Aprobado |
-
-La validación comprueba el funcionamiento en Chromium y una ventana móvil simulada; no representa una prueba exhaustiva en todos los navegadores o dispositivos físicos. La versión compilada pesa aproximadamente 346 kB en sus archivos iniciales de JavaScript y CSS, y alrededor de 90 kB estimados para transferencia comprimida, según Angular CLI.
 
 ## Ejecución y despliegue
 

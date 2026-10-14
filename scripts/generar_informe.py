@@ -69,7 +69,7 @@ table_number = 0
 def table(rows, widths):
     global table_number
     table_number += 1
-    titles = ['Continuidad entre las entregas', 'Organización del código', 'Resultados de los recorridos verificados']
+    titles = ['Continuidad entre las entregas', 'Organización del código']
     story.append(Paragraph(f'<b>Tabla {table_number}</b><br/><i>{titles[table_number-1]}</i>', styles['CaptionAPA']))
     cells = [[Paragraph(('<b>' if i == 0 else '') + escape(str(cell)) + ('</b>' if i == 0 else ''), styles['CellAPA']) for cell in row] for i, row in enumerate(rows)]
     obj = Table(cells, colWidths=widths, repeatRows=1, hAlign='LEFT')
@@ -196,24 +196,8 @@ story.append(PageBreak())
 
 heading('Diseño adaptable y accesibilidad')
 body('Las reglas CSS de semana 5 se reutilizaron en Angular. En ventanas de hasta 700 píxeles, la navegación se convierte en un menú desplegable y las tarjetas, artículos y formularios pasan a una columna. Se verificó que las vistas de inicio, listado, contacto y gestión no producen desplazamiento horizontal a 390 píxeles de ancho.')
-body('La interfaz incluye enlaces para saltar al contenido, foco visible, textos alternativos en imágenes, encabezados semánticos y mensajes de estado. Los botones de filtro y favoritos exponen su selección mediante aria-pressed. El diálogo de eliminación usa el elemento nativo dialog. Estas mejoras se verificaron en los recorridos descritos; no se realizó una auditoría integral de accesibilidad.')
+body('La interfaz incluye enlaces para saltar al contenido, foco visible, textos alternativos en imágenes, encabezados semánticos y mensajes de estado. Los botones de filtro y favoritos exponen su selección mediante aria-pressed. El diálogo de eliminación usa el elemento nativo dialog. Estas mejoras se verificaron en los recorridos principales; no se realizó una auditoría integral de accesibilidad.')
 figure(7,'Navegación e inicio en móvil',PROJECT/'evidencias/inicio-movil-menu.png','Captura real a 390 x 844 píxeles. El menú permite acceder a las mismas secciones de escritorio.',290)
-story.append(PageBreak())
-
-heading('Verificación y resultados')
-body('La compilación de producción se completó sin errores. Se ejecutaron ocho pruebas de recorridos con Playwright en Chromium: primero en el servidor local y después en la dirección pública de GitHub Pages. Los ocho recorridos aprobaron en ambos entornos. Las pruebas utilizan contextos aislados para no modificar los datos del navegador del estudiante.')
-table([
-    ['Recorrido verificado', 'Resultado'],
-    ['Catálogo, cuatro filtros, detalle, recarga y rutas inexistentes', 'Aprobado'],
-    ['Guardar favorito, recargar, quitar y estado vacío', 'Aprobado'],
-    ['Contacto vacío, espacios, correo inválido y confirmación válida', 'Aprobado'],
-    ['Crear, recargar, cancelar y confirmar borrado; limpiar favorito', 'Aprobado'],
-    ['Catálogo guardado inválido y catálogo intencionalmente vacío', 'Aprobado'],
-    ['Error HTTP, bloqueo de creación y reintento', 'Aprobado'],
-    ['Almacenamiento bloqueado al guardar un favorito', 'Aprobado'],
-    ['Menú móvil, seis vistas y capturas sin desbordamiento horizontal', 'Aprobado']
-], [365,103])
-body('La validación comprueba el funcionamiento en Chromium y una ventana móvil simulada; no representa una prueba exhaustiva en todos los navegadores o dispositivos físicos. La versión compilada pesa aproximadamente 346 kB en sus archivos iniciales de JavaScript y CSS, y alrededor de 90 kB estimados para transferencia comprimida, según Angular CLI.')
 story.append(PageBreak())
 
 heading('Ejecución y despliegue')
